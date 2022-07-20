@@ -3,7 +3,7 @@ program main
   logical :: isopen
   integer :: iunit
   real    :: temp
-  integer :: mask(360,181)
+  real    :: mask(360,181)
   integer :: i,j
 
 
@@ -30,9 +30,10 @@ program main
   ! |rec1_len | data | rec1_len | rec2_len | data | rec2_len |.....
   ! ---------------------------------------------------------------
 
+  mask = 0.
   do j = 1, 181
     do i = 1, 360
-      mask(i,j) = mod(i+j, 2)
+      mask(i,j) = mod(i+j,2)
     enddo
   enddo
 

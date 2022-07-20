@@ -1,5 +1,6 @@
-dset ^seq.ctl
+dset ^seq.grd
 title sequential file
+undef -9999.0
 options sequential
 xdef 360 linear 0. 1.0
 ydef 181 linear -90. 1.0
